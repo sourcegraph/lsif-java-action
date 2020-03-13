@@ -7,6 +7,8 @@ RUN git clone https://github.com/sourcegraph/lsif-java.git . && \
 
 FROM openjdk:13-jdk-buster
 
+RUN apt-get update -y && apt-get install -y maven
+
 LABEL version="0.1.0"
 LABEL repository="http://github.com/sourcegraph/lsif-java-action"
 LABEL homepage="http://github.com/sourcegraph/lsif-java-action"
