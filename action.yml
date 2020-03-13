@@ -1,0 +1,21 @@
+name: Sourcegraph Java LSIF Indexer
+description: Generate LSIF data from Java source code
+author: Sourcegraph
+branding:
+  icon: code
+  color: purple
+
+inputs:
+  file:
+    description: The output filename (relative to the repository root).
+    default: dump.lsif
+  project_root: 
+    description: The root of the project.
+    default: .
+
+runs:
+  using: docker
+  image: Dockerfile
+  env:
+    OUT: ${{ inputs.file }}
+    PROJECT_ROOT: ${{ inputs.project_root }}
