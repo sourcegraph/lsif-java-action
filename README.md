@@ -1,3 +1,3 @@
-# Sourcegraph Go LSIF Indexer GitHub Action
+# Sourcegraph Java LSIF Indexer GitHub Action
 
 Under construction.
