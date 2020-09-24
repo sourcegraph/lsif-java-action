@@ -3,6 +3,7 @@ FROM openjdk:13-jdk-buster as builder
 WORKDIR /build
 RUN apt-get update -y && apt-get install -y git maven
 RUN git clone https://github.com/sourcegraph/lsif-java.git . && \
+    git checkout 2de844423a3d94075b845b9d18b30b883b8b967c && \
     ./gradlew installDist
 
 FROM openjdk:13-jdk-buster
